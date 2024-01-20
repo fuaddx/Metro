@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- description -->
+    <meta name="description" content="MegaOne is a highly creative, modern, visually stunning and Bootstrap responsive multipurpose agency and HTML5 template with 14 ready home page demos.">
+    <!-- keywords -->
+    <meta name="keywords" content="creative, modern, clean, bootstrap responsive, html5, css3, portfolio, blog, agency, templates, multipurpose, one page, corporate, start-up, studio, branding, designer, freelancer, carousel, parallax, photography, personal, masonry, grid, faq">
+    <!-- Page Title -->
+    <title>Ad Agency | MegaOne HTML5 Template</title>
+    <!-- Favicon -->
+    <link rel="icon" href="~/Assets/ad-agency/img/favicon.ico">
+    <!-- Bundle -->
+    <link rel="stylesheet" href="~/Assets/vendor/css/bundle.min.css">
+    <!-- Plugin Css -->
+    <link rel="stylesheet" href="~/Assets/vendor/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="~/Assets/ad-agency/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Assets/ad-agency/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/Assets/vendor/css/swiper.min.css">
+
+    <link rel="stylesheet" href="~/Assets/vendor/css/cubeportfolio.min.css">
+    <!-- Revolution Slider CSS Files -->
+    <link rel="stylesheet" href="~/Assets/ad-agency/css/navigation.css">
+    <link rel="stylesheet" href="~/Assets/ad-agency/css/settings.css">
+    <!-- Slick CSS Files -->
+    <link rel="stylesheet" href="~/Assets/vendor/css/slick.css">
+    <link rel="stylesheet" href="~/Assets/vendor/css/slick-theme.css">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="~/Assets/ad-agency/css/style.css">
+    <!-- Custom Style CSS File -->
+    <link rel="stylesheet" href="~/Assets/ad-agency/css/custom.css">
+</head>
+<body data-spy="scroll" data-target=".navbar-nav" data-offset="90">
+
+    <!-- Loader -->
+    <div class="loader" id="loader-fade">
+        <div class="dot-container">
+            <div class="dot dot-1"></div>
+            <div class="dot dot-2"></div>
+            <div class="dot dot-3"></div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+                <filter id="goo">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                    <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7" />
+                </filter>
+            </defs>
+        </svg>
+    </div>
+    <!-- Loader ends -->
+    <!-- Header start -->
+    <section class="top-header cursor-light">
+        <div class="row no-gutters">
+            <div class="col-6 col-lg-4">
+                <div class="slider-icons">
+                    <ul class="slider-social banner-social d-flex">
+                        <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-facebook-f"></i> </a></li>
+                        <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-twitter"></i>  </a></li>
+                        <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-linkedin-in"></i> </a></li>
+                        <li class="animated-wrap"><a class="animated-element" href="javascript:void(0);"><i class="fab fa-instagram"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 col-lg-4 d-flex align-items-center justify-content-end justify-content-lg-center">
+                <a class="menu_bars menu-bars-setting sidemenu_toggle link mr-3 mr-lg-0">
+                    <div class="menu-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-4 d-flex justify-content-end" style="padding:15px" >
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a href="javascript:void(0)" class="btn-setting link btn-hvr-up btn-hvr-whatsapp color-white mr-lg-4 d-none d-lg-inline-block">
+                        Hi, @User.Identity.Name  &#128509;
+                    </a>
+                    <a class="btn btn-dark" asp-action="Logout" asp-controller="Auth" style="color:wheat;font-size:15px;text-decoration:none;">Logout</a>
+                }
+                else
+                {
+                    <a class="btn btn-dark" asp-action="Login" asp-controller="Auth" style="color:wheat;font-size:15px;text-decoration:none;margin-right:15px">Login</a>
+                    <a class="btn btn-dark" asp-action="Register" asp-controller="Auth" style="color:wheat;font-size:15px;text-decoration:none;margin-right:20px;">Register</a>
+                }
+
+            </div>
+        </div>
+    </section>
+    <header class="cursor-light">
+        <nav class="navbar navbar-top-default navbar-expand-lg nav-three-circles bottom-nav nav-box-shadow no-animation">
+            <div class="container-fluid">
+                <a class="logo ml-lg-1" href="javascript:void(0)">
+                    <img src="~/Assets/ad-agency/img/logo-pure-white.png" class="logo-default" alt="logo" title="Logo">
+                </a>
+                <div class="collapse navbar-collapse d-none d-lg-block">
+                    <ul class="nav navbar-nav mx-auto">
+                        <li class="nav-item"> <a href="#home" class="scroll nav-link link">home</a></li>
+                        <li class="nav-item"> <a href="#about" class="scroll nav-link link">about</a></li>
+                        <li class="nav-item"> <a asp-area="Admin" asp-controller="Blog" asp-action="Index" class=" nav-link link">Admin Panel</a></li>
+                        <li class="nav-item"> <a href="#work" class="scroll nav-link link">work</a></li>
+                        <li class="nav-item"> <a href="#pricing" class="scroll nav-link link">pricing</a></li>
+                        <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clients</a></li>
+                        <li class="nav-item"> <a href="#blog" class="scroll nav-link link">blog</a></li>
+                        <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contact</a></li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0)" class="nav-btn-number btn-setting btn-hvr-up btn-hvr-whatsapp color-white mr-lg-3"><i class="fab fa-whatsapp"></i> +1 631 112 1134</a>
+                <!-- side menu open button -->
+                <div class="menu-btn">
+                    <a class="menu_bars menu-bars-setting animated-wrap sidemenu_toggle">
+                        <div class="menu-lines animated-element">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                </div>
+                <!-- Side Menu -->
+            </div>
+        </nav>
+        <!-- side menu open button -->
+        <!--    <a class="menu_bars menu-bars-setting animated-wrap sidemenu_toggle d-lg-inline-block d-none">-->
+        <!--        <div class="menu-lines animated-element">-->
+        <!--            <span></span>-->
+        <!--            <span></span>-->
+        <!--            <span></span>-->
+        <!--        </div>-->
+        <!--    </a>-->
+        <!-- Side Menu -->
+        <div class="side-menu center">
+            <div class="quarter-circle">
+                <div class="menu_bars2 active" id="btn_sideNavClose">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="inner-wrapper justify-content-center">
+                <div class="col-md-12 text-center">
+                    <a href="javascript:void(0)" class="logo-full mb-4"><img src="~/Assets/ad-agency/img/logo-pure-white.png" alt=""></a>
+                </div>
+                <nav class="side-nav m-0">
+                    <ul class="navbar-nav flex-lg-row">
+                        <li class="nav-item"> <a href="#home" class="scroll nav-link link">home</a></li>
+                        <li class="nav-item"><a asp-area="Admin" asp-controller="Blog" asp-action="Index" class=" nav-link link">Admin Panel</a></li>
+                        <li class="nav-item"> <a href="#work" class="scroll nav-link link">work</a></li>
+                        <li class="nav-item"> <a href="#pricing" class="scroll nav-link link">pricing</a></li>
+                        <li class="nav-item"> <a href="#clients" class="scroll nav-link link">clients</a></li>
+                        <li class="nav-item"> <a href="#blog" class="scroll nav-link link">blog</a></li>
+                        <li class="nav-item"> <a href="#contact" class="scroll nav-link link">contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="side-footer text-white w-100">
+                    <ul class="social-icons-simple">
+                        <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-facebook-f color-white"></i> </a> </li>
+                        <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-instagram color-white"></i> </a> </li>
+                        <li class="side-menu-icons"><a href="javascript:void(0)"><i class="fab fa-twitter color-white"></i> </a> </li>
+                    </ul>
+                    <p class="text-white">&copy; 2020 MegaOne. Made With Love by Themesindustry</p>
+                </div>
+            </div>
+        </div>
+        <a id="close_side_menu" href="javascript:void(0);"></a>
+        <!--Side Menu-->
+    </header>
+    <!-- Header end -->
+            @RenderBody()
+    <footer class="p-half  bg-dark2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 text-center">
+                    <ul class="footer-icons mb-4">
+                        <li><a href="javascript:void(0)" class="wow fadeInUp facebook"><i class="fab fa-facebook-f"></i> </a> </li>
+                        <li><a href="javascript:void(0)" class="wow fadeInDown twitter"><i class="fab fa-twitter"></i> </a> </li>
+                        <li><a href="javascript:void(0)" class="wow fadeInUp google"><i class="fab fa-google"></i> </a> </li>
+                        <li><a href="javascript:void(0)" class="wow fadeInDown linkedin"><i class="fab fa-linkedin-in"></i> </a> </li>
+                        <li><a href="javascript:void(0)" class="wow fadeInUp instagram"><i class="fab fa-instagram"></i> </a> </li>
+                        <li><a href="javascript:void(0)" class="wow fadeInDown pinterest"><i class="fab fa-pinterest-p"></i> </a> </li>
+                    </ul>
+                    <p class="copyrights mt-2 mb-2">© 2020 MegaOne. Made with love by <a href="javascript:void(0)">themesindustry</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer ends -->
+    <!--Animated Cursor-->
+    <div id="animated-cursor">
+        <div id="cursor">
+            <div id="cursor-loader"></div>
+        </div>
+    </div>
+    <!--Animated Cursor End-->
+    <!-- JavaScript -->
+    <script src="~/Assets/vendor/js/bundle.min.js"></script>
+
+    <!-- Plugin Js -->
+    <script src="~/Assets/vendor/js/jquery.fancybox.min.js"></script>
+    <script src="~/Assets/vendor/js/owl.carousel.min.js"></script>
+    <script src="~/Assets/vendor/js/swiper.min.js"></script>
+    <script src="~/Assets/vendor/js/jquery.cubeportfolio.min.js"></script>
+    <script src="~/Assets/vendor/js/jquery.appear.js"></script>
+    <script src="~/Assets/vendor/js/parallaxie.min.js"></script>
+    <script src="~/Assets/vendor/js/wow.min.js"></script>
+    <!-- Owl Carousel JS File -->
+    <script src="~/Assets/ad-agency/js/owl.carousel.js"></script>
+    <!-- Slick JS File -->
+    <script src="~/Assets/vendor/js/slick.min.js"></script>
+    <!-- Tween Max Animation File -->
+    <script src="~/Assets/ad-agency/js/TweenMax.min.js"></script>
+    <!-- Morphtext File -->
+    <script src="~/Assets/ad-agency/js/morphext.min.js"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="~/Assets/vendor/js/jquery.themepunch.tools.min.js"></script>
+    <script src="~/Assets/vendor/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION EXTENSIONS -->
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="~/Assets/vendor/js/extensions/revolution.extension.video.min.js"></script>
+
+    <!-- Google Map Api -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgIfLQi8KTxTJahilcem6qHusV-V6XXjw"></script>
+    <script src="~/Assets/ad-agency/js/maps.min.js"></script>
+
+    <!-- custom script -->
+    <script src="~/Assets/ad-agency/js/script.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

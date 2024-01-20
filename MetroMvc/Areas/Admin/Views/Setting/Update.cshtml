@@ -1,0 +1,37 @@
+﻿@model SettingUpdateVm
+@{
+	ViewData["Title"] = "Update";
+}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+	<!-- Page Heading -->
+	<h1 class="h3 mb-2 text-gray-800">Tables</h1>
+
+	<!-- DataTales Example -->
+	<div class="card shadow mb-4">
+		<div class="card-header py-3">
+			<h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+		</div>
+		<div class="card-body">
+			<div class="table-responsive">
+				<form asp-action="Update" method="post">
+
+					<div class="form-group">
+						<label asp-for="MainImage"></label>
+						</br>
+						@if(!string.IsNullOrEmpty(Model.ImageUrl)){
+
+							<img style="width:18%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFCeqcQln9TquiGb1k3eJnJqARaUr3umqXFw&usqp=CAU" />
+						}
+						<input asp-for="MainImage" class="form-control">
+						<span asp-validation-for="MainImage" class="text-danger"></span>
+					</div>
+					<button class="btn btn-info">Update</button>
+					<a asp-action="Cancel" class="btn btn-danger">Cancel</a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</div>

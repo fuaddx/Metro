@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BlogListItemVm>
+@{
+    Layout = null;
+}
+<!-- Blog start -->
+<section id="blog" class="half-section p-0 bg-change bg-yellow">
+    <h2 class="d-none">heading</h2>
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            @foreach(var item in Model)
+            {
+                @if (!item.IsDeleted)
+                {
+                    <div class="col-lg-6 col-md-12 p-0">
+                        <div class="hover-effect">
+                            <img alt="blog" src="~/Assets/ad-agency/img/split-blog.jpg" class="about-img">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 p-lg-0">
+                        <div class="split-container-setting style-three text-center">
+                            <div class="main-title mb-5 wow fadeIn" data-wow-delay="300ms">
+                                <h5 class="font-18 text-blue"> @item.Date</h5>
+                                <h2 class="mb-0 font-weight-normal">@item.Button </h2>
+                            </div>
+                            <p class="color-black mb-5">@item.Descriptions</p>
+
+                            <a href="ad-agency/blog.html" class="btn-setting color-black btn-hvr-up btn-blue btn-hvr-pink">learn more</a>
+                        </div>
+                    </div>
+                }
+            }
+            
+
+        </div>
+    </div>
+</section>
+<!-- Blog ends -->
